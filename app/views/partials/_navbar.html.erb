@@ -80,7 +80,8 @@
                     <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     	<%= image_tag(image_path('user_icon_default.png'), class: 'user-avatar-md rounded-circle')%>
                         <% if user_signed_in? %>
-                            <span class="ml-2"><%=current_user.email%></span>    
+                            <span class="ml-2"><%=current_user.email%></span>
+
                         <%end%>
                     	
                     </a>
@@ -88,7 +89,15 @@
                         <div class="nav-user-info">
                             <% if user_signed_in?%>
                                 <h5 class="mb-0 text-white nav-user-name">
-                                    <%= current_user.email %>
+                                    <div class="progress blue">
+                                        <span class="progress-left">
+                                            <span class="progress-bar"></span>
+                                        </span>
+                                        <span class="progress-right">
+                                            <span class="progress-bar"></span>
+                                        </span>
+                                    <div class="progress-value">90%</div>
+                            </div>  
                                 </h5>
                                 <span class="status"></span>
                                 <span class="ml-2">Available</span>
