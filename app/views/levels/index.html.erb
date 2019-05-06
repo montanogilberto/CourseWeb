@@ -1,0 +1,33 @@
+
+<h1 class="card-header" >Levels</h1>
+
+<div class="table-responsive">
+  <table class="table">
+  <thead class="bg-light">
+    <tr class="border-0">
+      <th class="border-0">Name</th>
+      <th class="border-0">Complete</th>
+      <th class="border-0">Percent</th>
+      <th colspan="3" class="border-0"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @levels.each do |level| %>
+      <tr>
+        <td><%= level.name %></td>
+        <td><%= level.complete %></td>
+        <td><%= level.percent %></td>
+        <td><%= link_to 'Show', level %></td>
+        <td><%= link_to 'Edit', edit_level_path(level) %></td>
+        <td><%= link_to 'Destroy', level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+
+
+<br>
+
+<%= link_to 'New Level', new_level_path %>

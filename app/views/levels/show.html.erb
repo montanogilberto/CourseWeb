@@ -1,0 +1,19 @@
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @level.name %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @level.complete %>
+</p>
+
+<p>
+  <strong>Percent:</strong>
+  <%= @level.percent %>
+</p>
+
+<%= link_to 'Edit', edit_level_path(@level) %> |
+<%= link_to 'Back', levels_path %>

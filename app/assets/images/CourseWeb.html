@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:3000/users/sign_in -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CourseWeb</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="lsB/A8h0wJSZCiiUdzwInKuFSzEx+nJow0w9m+4DmXFm3r0he5i3e/NzHLyt+MJtqZXdpw4kbHNmILfWbZedLw==">
+
+    <link rel="stylesheet" media="all" href="./CourseWeb_files/style.self-fd50b244d4341ed666fbcf1ae2f7fce143ec49d8aa69199fbbdeb9c8e3bbff17.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/application.self-7d2712053dc68dd550e2343c2af865e07dd5fa7b054a0464ad6887dd29ef3183.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/chartist.min.self-8b3fa1326df6746ca72d752b5b0d37d304160f9bcf836095088f108bf3073398.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/font-awesome.self-407fb3615be540a148636cc5d171903af160c86d0eaf12321feadbd280e334c3.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/morris.self-b331eeb1aa336d072d4e7e055fede5e44d00e73a31cfbfa77b87ebf0d816265c.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/material_icons.self-81386285fbfb578a1ff61a3fdee4176fcb893456cfcc926be56cb8292d6731f2.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/flag-icon.self-d50865910bbf2d35834c870f6d10e9e2348822607f0a08785bb3040e43f12e29.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./CourseWeb_files/c3.self-60283f9c5b3c7ff2b5da055a606231c25ab59bdf7757b6600ac2c76d8e4e6e5f.css" data-turbolinks-track="reload">
+    <script src="./CourseWeb_files/rails-ujs.self-8944eaf3f9a2615ce7c830a810ed630e296633063af8bb7441d5702fbe3ea597.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/jquery3.self-5af507e253c37e9c9dcf65064fc3f93795e6e28012780579975a4d709f4074ad.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/jquery.slimscroll.min.self-ef4d19ff87aeed43da5cfa98d11109552a2497d5475d820effc123e6e55d4f9f.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/util.self-a0c927284f352a57b03b059912bd2ee2561c33c27b791d6ce085cf5adbe7dee5.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/alert.self-fb397b96e9b51d772e5707f5c473abacdbf29cb896f737798abc1a7d2f6b9c79.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/button.self-c54915a50f56c9007158615d9636e92fb05b2ebbdc900b33ed5a52701450baa0.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/carousel.self-23dfaa11deebafc49df9db6a6d16733e594196727a51f41a3180be50600a0dd5.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/collapse.self-e34ea6472a55ad646724bc41ea03ccb43aabe7605e899316ad458ad47c21bbea.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/dropdown.self-82dfb29c4b6d846eb68eba044853a2d1b98e1ad7fcf9b5b564ae71c3d1202d2d.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/modal.self-c426d324514358777867d27a25fad10b6fec353137b8da795a305b0988ce3e6f.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/tooltip.self-07c32e7ffc85c7766b3626f1ebb36fff50d7bbd0db98d67a01957fb594430c7d.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/popover.self-7230e09abae7f369855a6e32aa734934ee3d3d9907dd72548df3e6a1d0284248.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/scrollspy.self-4410bff703a3994390a1dc11352eb60888c3e78861349fa6fe2af2900d5894f0.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/tab.self-30df4a05f2141d8d2020aad12d26c9ca9dc83a650a32f9c5b132dbb522ae0f39.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/toast.self-e52ce42f63aa24eedfe55eea46da14a788dbb456296c2ee801d77599ea0f1892.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/bootstrap.self-91405a85c7ea7ffc2407472f08a86cd29ba078b4e18f962931a4cf3270a7ba4d.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/c3.self-f11a22f6f3acebf28f35b5b83bf268659a0d148fe2337e84927d2c925c0465ad.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/chartist.self-9429086056937869d92888765713a6471532befdd13ca0e9bdb87cfd711815fa.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/raphael.self-6f41bb1c6a6163ada80fe9a2e55a89fa7369dd9df4764aa86ba8ad1441988faa.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/morris.self-4c843f29ec9c0cb662ca9965d26f18262b248d006ee8f11a086d1c1c9b6c45c8.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js.descarga" data-turbolinks-track="reload"></script>
+<script src="./CourseWeb_files/application.self-01f48d20b99e9587448da523ff75d86db93a42bb2f278510963929fd9dbd9a5d.js.descarga" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+  	<div class="dashboard-main-wrapper">
+  		<p class="notice"></p>
+  		<p class="alert"></p>
+  		<div class="dashboard-header">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <a class="navbar-brand"></a><a href="http://localhost:3000/">Course</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-right-top">
+                <li class="nav-item">
+                    <div id="custom-search" class="top-search-bar">
+                        <input class="form-control" type="text" placeholder="Search..">
+                    </div>
+                </li>
+                <li class="nav-item dropdown notification">
+                    <a href="http://localhost:3000/users/sign_in#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link nav-icons"><i class="fas fa-fw"></i> <span class="indicator"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                        <li>
+                            <div class="notification-title"> Notification</div>
+                            <div class="notification-list">
+                                <div class="list-group">
+                                    <a href="http://localhost:3000/users/sign_in#" class="list-group-item list-group-item-action active">
+                                        <div class="notification-info">
+                                            <div class="notification-list-user-img">
+                                            	<img class="user-avatar-md rounded-circle" src="./CourseWeb_files/avatar-2-bb84783dfebe7f1061c7a7c606a6d1a994e33bf2afe2d6c7330c9c04dc05c3d3.jpg" alt="Avatar 2">
+                                            	<!--<img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle">-->
+                                            </div>
+                                            <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                <div class="notification-date">2 min ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="http://localhost:3000/users/sign_in#" class="list-group-item list-group-item-action">
+                                        <div class="notification-info">
+                                        	
+                                            <div class="notification-list-user-img">
+                                            	<img class="notification-list-user-img" src="./CourseWeb_files/avatar-3-bb84783dfebe7f1061c7a7c606a6d1a994e33bf2afe2d6c7330c9c04dc05c3d3.jpg" alt="Avatar 3">
+                                            	<!--<img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle">-->
+                                            </div>
+                                            <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                <div class="notification-date">2 days ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="http://localhost:3000/users/sign_in#" class="list-group-item list-group-item-action">
+                                        <div class="notification-info">
+                                            <div class="notification-list-user-img">
+                                            	<img class="user-avatar-md rounded-circle" src="./CourseWeb_files/avatar-4-bb84783dfebe7f1061c7a7c606a6d1a994e33bf2afe2d6c7330c9c04dc05c3d3.jpg" alt="Avatar 4">
+                                            	<!--<img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle">-->
+                                            </div>
+                                            <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                <div class="notification-date">2 min ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="http://localhost:3000/users/sign_in#" class="list-group-item list-group-item-action">
+                                        <div class="notification-info">
+                                            <div class="notification-list-user-img">
+                                            	<img class="user-avatar-md rounded-circle" src="./CourseWeb_files/avatar-5-bb84783dfebe7f1061c7a7c606a6d1a994e33bf2afe2d6c7330c9c04dc05c3d3.jpg" alt="Avatar 5">
+                                            	<!--<img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle">-->
+                                            </div>
+                                            <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                <div class="notification-date">2 min ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-footer"> <a href="http://localhost:3000/users/sign_in#">View all notifications</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown nav-user">
+                    <a class="nav-link nav-user-img" href="http://localhost:3000/users/sign_in#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    	<img class="user-avatar-md rounded-circle" src="./CourseWeb_files/user_icon_default-ca8d9b3dcff5ae29acdf698d1fedb9291f2d2efdf0c2124c025463b050aa73b4.png" alt="User icon default">
+                    	<!--<img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle">-->
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                        <div class="nav-user-info">
+                            <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                            <span class="status"></span><span class="ml-2">Available</span>
+                        </div>
+                        <a class="dropdown-item" href="http://localhost:3000/users/sign_in#"><i class="fas fa-user mr-2"></i>Account</a>
+                        <a class="dropdown-item" href="http://localhost:3000/users/sign_in#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                        <a class="dropdown-item" href="http://localhost:3000/users/sign_in#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+  		<div class="nav-left-sidebar sidebar-dark">
+    <div class="menu-list">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="d-xl-none d-lg-none" href="http://localhost:3000/users/sign_in#">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-divider">
+                        Menu
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                        <div id="submenu-1" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                    <div id="submenu-1-2" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/index.html">E Commerce Dashboard</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/ecommerce-product.html">Product List</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/ecommerce-product-single.html">Product Single</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/ecommerce-product-checkout.html">Product Checkout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/dashboard-finance.html">Finance</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/dashboard-sales.html">Sales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
+                                    <div id="submenu-1-1" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/dashboard-influencer.html">Influencer</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/influencer-finder.html">Influencer Finder</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/influencer-profile.html">Influencer Profile</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
+                        <div id="submenu-2" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/general.html">General</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/carousel.html">Carousel</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/listgroup.html">List Group</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/typography.html">Typography</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/accordions.html">Accordions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/tabs.html">Tabs</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
+                        <div id="submenu-3" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/chart-c3.html">C3 Charts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/chart-chartist.html">Chartist Charts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/chart-charts.html">Chart</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/chart-morris.html">Morris</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/chart-sparkline.html">Sparkline</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/chart-gauge.html">Guage</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
+                        <div id="submenu-4" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/form-elements.html">Form Elements</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/form-validation.html">Parsely Validations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/multiselect.html">Multiselect</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/datepicker.html">Date Picker</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/bootstrap-select.html">Bootstrap Select</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
+                        <div id="submenu-5" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/general-table.html">General Tables</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/data-tables.html">Data Tables</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-divider">
+                        Features
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
+                        <div id="submenu-6" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/blank-page.html">Blank Page</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/blank-page-header.html">Blank Page Header</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/404-page.html">404 page</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/sign-up.html">Sign up Page</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/forgot-password.html">Forgot Password</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/pricing.html">Pricing Tables</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/timeline.html">Timeline</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/calendar.html">Calendar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/widgets.html">Widgets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/media-object.html">Media Objects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/cropper-image.html">Cropper</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/color-picker.html">Color Picker</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
+                        <div id="submenu-7" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/inbox.html">Inbox</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/email-details.html">Email Detail</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/email-compose.html">Email Compose</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/message-chat.html">Message Chat</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
+                        <div id="submenu-8" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/icon-fontawesome.html">FontAwesome Icons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/icon-material.html">Material Icons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/icon-simple-lineicon.html">Simpleline Icon</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/icon-themify.html">Themify Icon</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/icon-flag.html">Flag Icons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/icon-weather.html">Weather Icon</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+                        <div id="submenu-9" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/map-google.html">Google Maps</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/pages/map-vector.html">Vector Maps</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
+                        <div id="submenu-10" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/sign_in#">Level 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/sign_in#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
+                                    <div id="submenu-11" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/sign_in#">Level 1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="http://localhost:3000/users/sign_in#">Level 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:3000/users/sign_in#">Level 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+      <div class="dashboard-wrapper">
+    <div class="dashboard-ecommerce">
+        <div class="container-fluid dashboard-content ">
+            <!-- ============================================================== -->
+            <!-- pageheader  -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-header">
+                        <h2 class="pageheader-title">E-commerce Dashboard Template </h2>
+                        <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                        <div class="page-breadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="http://localhost:3000/users/sign_in#" class="breadcrumb-link">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end pageheader  -->
+            <!-- ============================================================== -->
+            <div class="ecommerce-widget">
+                <h2>Log in</h2>
+
+<form class="new_user" id="new_user" action="http://localhost:3000/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="lsB/A8h0wJSZCiiUdzwInKuFSzEx+nJow0w9m+4DmXFm3r0he5i3e/NzHLyt+MJtqZXdpw4kbHNmILfWbZedLw==">
+  <div class="field">
+    <label for="user_email">Email</label><br>
+    <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]" id="user_email">
+  </div>
+
+  <div class="field">
+    <label for="user_password">Password</label><br>
+    <input autocomplete="current-password" type="password" name="user[password]" id="user_password">
+  </div>
+
+    <div class="field">
+      <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+      <label for="user_remember_me">Remember me</label>
+    </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Log in" data-disable-with="Log in">
+  </div>
+</form>
+
+  <a href="http://localhost:3000/users/sign_up">Sign up</a><br>
+
+  <a href="http://localhost:3000/users/password/new">Forgot your password?</a><br>
+
+
+
+
+
+                <!--<div class="row"></div>-->
+            </div>
+        </div>
+    </div>
+</div>
+    	<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                 Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="text-md-right footer-links d-none d-sm-block">
+                    <a href="javascript: void(0);">About</a>
+                    <a href="javascript: void(0);">Support</a>
+                    <a href="javascript: void(0);">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div <script="" src="https://d3js.org/d3.v5.min.js">
+  
+
+</div></div></body></html>
