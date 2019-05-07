@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :lessons
   resources :units
   resources :levels
   devise_for :users
