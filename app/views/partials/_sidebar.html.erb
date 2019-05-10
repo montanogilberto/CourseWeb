@@ -11,52 +11,25 @@
                     <li class="nav-divider">
                         Levels
                     </li>
-                    <%= @levels.each do |level|%>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-<%= level.id%>">
-                                <i class="<%=level.icon%>"></i>
-                                <%= level.name%>
-                                <span class="badge badge-success">6</span>
-                            </a>
-                            <div id="submenu-<%= level.id%>" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <%= @units.each do |unit|%>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-<%= unit.level_id%>" aria-controls="submenu-1-<%= unit.level_id%>">
-                                            <%= unit.name%>
-                                            </a>
-                                            <div id="submenu-1-<%= unit.level_id%>" class="collapse submenu" style="">
-                                                <ul class="nav flex-column">
-                                                    <% @lessons.each do |lesson|%>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link">
-                                                            <%= lesson.name%>
-                                                        </a>
-                                                    </li>
-                                                    <% end -%>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    <% end -%>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
-                                        <div id="submenu-1-1" class="collapse submenu" style="">
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                    <% @levels.each do |level|%>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-<%= level.id%>" aria-controls="submenu-<%= level.id%>">
+                                    <i class="<%=level.icon%>"></i>
+                                    <%= level.name%>
+                                    <span class="badge badge-success">6</span>
+                                </a>
+                                <div id="submenu-<%= level.id%>" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <% @units.each do |unit|%>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-<%= level.id%>-2" aria-controls="submenu-<%= level.id%>-2">
+                                                <%= unit.name%>
+                                                </a>
+                                            </li>
+                                        <% end -%>
+                                    </ul>
+                                </div>
+                            </li>  
                     <% end -%>
                     <li class="nav-divider">
                         Menu
